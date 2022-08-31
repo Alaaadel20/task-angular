@@ -1,0 +1,52 @@
+<router-outlet ></router-outlet>
+  
+
+      
+  <div id="view" class="e-btn-group">
+    <input type="radio" id="left" name="align" value="1" (click)="changeDisplay(1)"/>
+    <label class="e-btn mg" for="left">Grid View</label>
+    <input type="radio" id="right" name="align" value="2" (click)="changeDisplay(2)"/>
+    <label class="e-btn" for="right">List View</label>
+  </div>
+
+<div class="input-group  newInput">
+  <input type="text" class="form-control " 
+  placeholder="Search by category" aria-label="Search by category" 
+  aria-describedby="button-addon2"
+  [(ngModel)]="filteredName" 
+ >
+
+</div>
+
+<div class="row justify-content-around" *ngIf="display === 1;else list_content">
+
+<app-product-details
+class="col-md-4 "
+*ngFor=" let productItem of products | filter:filteredName:'category' let i = index "
+[product]="productItem"
+[index]="i"
+></app-product-details>
+</div>
+
+
+<ng-template  #list_content>
+<div class="list-group-item clearfix list " >
+  
+<app-product-details
+
+*ngFor="let productItem of products | filter:filteredName:'category' let i = index"
+[product]="productItem"
+[index]="i"
+></app-product-details>
+</div>
+ </ng-template>
+      
+
+
+
+<!-- <app-single-product
+*ngIf="selectedProduct; else list"
+[product]="selectedProduct"
+ ></app-single-product>   -->
+
+

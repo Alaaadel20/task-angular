@@ -1,0 +1,54 @@
+.category{
+    background-color: rgb(164, 9, 81);
+    font-weight: 500;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: azure;
+    align-items: center;
+}
+.price{
+    background-color: rgb(9, 154, 164);
+    font-weight: 500;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: azure;
+    align-items: center;
+}
+.mg{
+    margin-bottom: 10px;
+  
+}
+// .btn{
+//     padding: 0 20px;
+//     border-radius: 999px;
+    
+// }
+img{
+    width: 80%;
+   height: 80%;
+   
+
+}
+.product{
+    padding: 24px;
+  display: flex;
+  justify-content: center;
+    width: 100%;
+    height:300px;
+  
+}
+.card-title{
+    color: rgb(29, 53, 108);
+    font-size: 20px;
+    text-align: center;
+  }
+.link{
+    text-decoration: none;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    
+
+}

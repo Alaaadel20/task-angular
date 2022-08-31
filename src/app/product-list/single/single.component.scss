@@ -1,0 +1,59 @@
+img {
+    height: 250px;
+}
+.bottom{
+    margin-top: 32px;
+}
+
+.product{
+    padding: 24px;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.category{
+color: rgb(164, 9, 81);
+    font-weight: 500;
+   
+    border-radius: 999px;
+ 
+    align-items: center;
+}
+.price{
+    background-color: rgb(9, 154, 164);
+    font-weight: 500;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: azure;
+    align-items: center;
+}
+
+
+  .backdrop {
+    
+    position: fixed;
+    top: 100px;
+   
+    width: 80%;
+    height: 75vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+  }
+  
+  .modal {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 40%;
+    top:30%;
+  left: 20px;
+    width: 60%;
+    z-index: 100;
+    margin: 0 auto;
+
+  }

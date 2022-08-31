@@ -1,0 +1,70 @@
+
+
+ <ng-container *ngIf="items.length !==0">
+  <router-outlet></router-outlet>
+  <div class="container">
+   
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+         <app-checkout></app-checkout>
+        
+      </div>
+     
+
+      <div class="col-md-8 order-md-1">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Your cart</span>
+          <span class="badge badge-secondary badge-pill">{{total}}</span>
+        </h4>
+        <ul class="list-group mb-3" *ngFor="let item of items  let i = idIem">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+         <a  
+         [routerLink]="[idIem]"
+         [idIem]="i"
+         >  <div>
+          <h6 class="my-0">{{item.category}}</h6>
+        </div>
+        <div>
+          <span class="text-muted">{{item.price | currency}}</span>
+        <p class="amount">{{item.amount}}</p>
+        </div>
+        <div class="input-group mb-3 inputz">
+          <input type="number" 
+          min="0" class="form-control" 
+          placeholder="ex:3" aria-label="Recipient's username" 
+          aria-describedby="button-addon2"
+          #amount>
+          <div class="input-group-append"
+          >
+            <button (click)="onAmountchange(item)" class="btn btn-primary btn-sm btnx btnz" type="submit" id="button-addon2">change amount</button>
+          </div>
+        </div>
+        <button (click)="removeItem(item)" class=" btn btn-primary btn-sm btnx"><span class="material-icons delete">
+          delete
+          </span></button></a>
+              
+          </li>
+      
+         
+        
+        </ul>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (USD)</span>
+          <strong>$20</strong>
+        </li>
+      </div>
+     
+    </div>
+  </div>
+</ng-container>
+
+ 
+    
+   
+
+
+  <ng-container *ngIf="items.length ===0">
+    <div class="container d-flex justify-content-center align-items-center cart">
+      <h1 >Your cart is empty !</h1>
+     </div>
+  </ng-container>

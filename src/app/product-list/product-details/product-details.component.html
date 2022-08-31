@@ -1,0 +1,37 @@
+
+
+  <div class="card mb-3 shadow-sm box ">
+<a
+class="link" [routerLink]="[index]"
+
+> <div class="product">
+  <img class="card-img-top never" 
+  
+  [src]="product.imagePath" 
+   alt="{{product.name}}"></div>
+
+<div class="card-body">
+ 
+ 
+  <h5 class="card-title name ">{{product.name}}</h5>
+ <div class="d-flex justify-content-between mg" > <span class="category"  >{{product.category}}</span>
+  <span class="card-text price">{{product.price | currency}}</span></div>
+
+
+<div class="btnContainer">
+
+
+</div>
+    
+  </div></a>
+  <button
+  type="button" 
+ class="btn btn-primary d-block"
+ (click)="addToCart(product)"
+>Add to Card</button>
+
+   
+    </div>
+
+
+
